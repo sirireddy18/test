@@ -10,7 +10,7 @@ import com.example.demo.model.Person;
 import com.example.demo.service.PersonService;
 
 import jakarta.validation.Valid;
-
+@Controller
 public class PersonController {
 
 	private PersonService personService;
@@ -22,7 +22,7 @@ public class PersonController {
 		
 	}
 	@GetMapping("/add")
-	public String showaddForm(Model model) {
+	public String showAddForm(Model model) {
 		model.addAttribute("person", new Person());
 		return "add-Person";	
 	}
