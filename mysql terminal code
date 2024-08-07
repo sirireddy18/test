@@ -1,0 +1,6 @@
+sudo mysql --defaults-file=/etc/mysql/debian.cnf -e "CREATE USER 'custom'@'localhost' IDENTIFIED BY 'MySQL123$'; GRANT ALL PRIVILEGES ON *.* To 'custom'@'localhost'; FLUSH PRIVILEGES;"; 
+
+mysql -ucustom -pMySQL123$
+
+sudo service mysql status
+
