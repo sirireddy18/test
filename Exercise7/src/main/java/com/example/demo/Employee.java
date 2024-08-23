@@ -73,4 +73,9 @@ public class Employee {
 	public void setTechStack(String techStack) {
 		this.techStack = techStack;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
 }
