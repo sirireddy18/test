@@ -56,7 +56,7 @@ public class EmployeeController {
     	
     			return employeeRepository.save(employee);
     	})
-    			.orElseThrow(() -> new ResourceNotFoundException("Employee Not Found With Id:" + updatedEmployee.getId()));
+    			.orElseThrow(() -> new NoSuchElementException("Employee Not Found With Id:" + updatedEmployee.getId()));
     }
     
     @DeleteMapping("/delete")
